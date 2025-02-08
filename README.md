@@ -20,5 +20,5 @@ A minimalist and responsive e-library web application where users can upload, ma
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/e-library.git
-   cd e-library
+   git clone https://github.com/fr1221/E-Library.git
+   cd E-Library
