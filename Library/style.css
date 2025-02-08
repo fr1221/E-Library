@@ -1,0 +1,193 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+button,
+select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.search-sort {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    flex: 1;
+    margin-right: 10px;
+}
+
+#library {
+    margin-top: 20px;
+}
+
+.book {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.book h3 {
+    margin: 0;
+}
+
+.book p {
+    margin: 5px 0;
+}
+
+.book-actions {
+    display: flex;
+    gap: 10px;
+}
+
+#pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-button:hover {
+    background-color: #0056b3;
+}
+
+.notification {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+.notification.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.notification.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Dark Mode Styles */
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark .container {
+    background-color: #444;
+}
+
+body.dark button {
+    background-color: #218838;
+}
+
+body.dark .pagination-button {
+    background-color: #0056b3;
+}
+
+body.dark .book {
+    background-color: #555;
+}
+
+body.dark .book a {
+    color: #66b3ff;
+}
+
+body.dark .notification.success {
+    background-color: #155724;
+}
+
+body.dark .notification.error {
+    background-color: #721c24;
+}
+
+/* Minimalist Download Button */
+.download-btn {
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.download-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.download-btn:active {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
