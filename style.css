@@ -1,4 +1,4 @@
-body {
+ body { 
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
@@ -132,6 +132,7 @@ button:hover {
     color: #721c24;
 }
 
+/* Dark Mode Styles */
 body.dark {
     background-color: #333;
     color: #fff;
@@ -165,7 +166,6 @@ body.dark .notification.error {
     background-color: #721c24;
 }
 
-/* Minimalist Download Button */
 .download-btn {
     padding: 8px 16px;
     background-color: transparent;
@@ -190,23 +190,39 @@ body.dark .notification.error {
     border-color: #0056b3;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1024px) {
     .container {
+        max-width: 800px;
+        padding: 20px;
+    }
+
+    .search-sort {
+        justify-content: space-between;
+    }
+
+    .book {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .book-actions {
+        margin-left: 10px;
+    }
+
+    .pagination-button {
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .container {
+        max-width: 700px;
         padding: 15px;
     }
 
     .search-sort {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    #searchInput {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    #library {
-        margin-top: 15px;
     }
 
     .book {
@@ -221,21 +237,29 @@ body.dark .notification.error {
 
     .pagination-button {
         padding: 6px 12px;
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
     h1 {
         font-size: 24px;
-        margin-bottom: 15px;
     }
 
     input,
     button,
     select {
         padding: 8px;
-        font-size: 12px;
+        font-size: 14px;
     }
 
     button {
@@ -243,11 +267,61 @@ body.dark .notification.error {
     }
 
     .book h3 {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .pagination-button {
         padding: 5px 10px;
         font-size: 12px;
+    }
+
+    .book {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .book-actions {
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    .search-sort {
+        flex-direction: column;
+    }
+
+    #searchInput {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    input,
+    button,
+    select {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    button {
+        font-size: 13px;
+    }
+
+    .book h3 {
+        font-size: 16px;
+    }
+
+    .pagination-button {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    .book-actions {
+        gap: 5px;
     }
 }
