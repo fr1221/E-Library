@@ -1,4 +1,4 @@
- body { 
+body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
@@ -132,7 +132,6 @@ button:hover {
     color: #721c24;
 }
 
-/* Dark Mode Styles */
 body.dark {
     background-color: #333;
     color: #fff;
@@ -323,5 +322,28 @@ body.dark .notification.error {
 
     .book-actions {
         gap: 5px;
+    }
+}
+
+select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%; 
+    box-sizing: border-box; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+}
+
+.search-sort select {
+    width: auto; 
+    text-align: center; 
+}
+
+@media screen and (max-width: 768px) {
+    .search-sort select {
+        width: 100%; 
     }
 }
