@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentPage = 1;
   const booksPerPage = 5;
 
-  // Check for saved theme in localStorage
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme) {
     body.classList.add(savedTheme);
@@ -19,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
       savedTheme === "dark" ? "🌞 Light Mode" : "🌙 Dark Mode";
   }
 
-  // Dark Mode toggle
   themeToggle.addEventListener("click", () => {
     if (body.classList.contains("dark")) {
       body.classList.remove("dark");
@@ -32,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Function to display books
   function displayBooks(filteredBooks = books, page = 1) {
     library.innerHTML = "";
     const start = (page - 1) * booksPerPage;
@@ -60,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
     displayPagination(filteredBooks.length);
   }
 
-  // Function to display pagination
   function displayPagination(totalBooks) {
     pagination.innerHTML = "";
     const totalPages = Math.ceil(totalBooks / booksPerPage);
@@ -77,7 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Function to add a new book
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const title = document.getElementById("title").value;
@@ -106,7 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Function to delete a book
   window.deleteBook = function (index) {
     books.splice(index, 1);
     localStorage.setItem("books", JSON.stringify(books));
@@ -114,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
     showNotification("Buku berhasil dihapus!", "success");
   };
 
-  // Function to edit a book
   window.editBook = function (index) {
     const book = books[index];
     document.getElementById("title").value = book.title;
@@ -127,7 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
     showNotification("Buku siap diedit!", "success");
   };
 
-  // Function to search books
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase();
     const filteredBooks = books.filter(
@@ -139,14 +131,12 @@ document.addEventListener("DOMContentLoaded", () => {
     displayBooks(filteredBooks);
   });
 
-  // Function to sort books
   sortSelect.addEventListener("change", () => {
     const sortBy = sortSelect.value;
     books.sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
     displayBooks();
   });
 
-  // Function to show notifications
   function showNotification(message, type) {
     const notification = document.createElement("div");
     notification.className = `notification ${type}`;
@@ -155,6 +145,5 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => notification.remove(), 3000);
   }
 
-  // Initial display of books
   displayBooks();
 });
