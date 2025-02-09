@@ -57,11 +57,23 @@ button:hover {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 #searchInput {
     flex: 1;
     margin-right: 10px;
+    max-width: calc(100% - 120px);
+}
+
+#searchInput, #sortSelect {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    max-width: 120px;
+    flex-shrink: 0;
 }
 
 #library {
@@ -331,19 +343,19 @@ select {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
-    width: 100%; 
-    box-sizing: border-box; 
-    text-overflow: ellipsis; 
-    white-space: nowrap; 
+    width: 100%;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .search-sort select {
-    width: auto; 
-    text-align: center; 
+    width: auto;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
     .search-sort select {
-        width: 100%; 
+        width: 100%;
     }
 }
