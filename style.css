@@ -69,8 +69,9 @@ button:hover {
 
 #searchInput {
     flex-grow: 1;
-    min-width: 0;
+    min-width: 0; /* Prevent input from becoming too wide */
     margin-right: 10px;
+    max-width: calc(100% - 120px); /* Prevent input from overflowing the container */
 }
 
 button {
