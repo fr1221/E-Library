@@ -19,7 +19,7 @@ body {
     width: 100%;
     max-width: 800px;
     text-align: center;
-    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    box-sizing: border-box;
     transition: background-color 0.3s;
 }
 
@@ -30,7 +30,7 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
-    align-items: stretch; /* Ensure form elements take full width */
+    align-items: stretch;
 }
 
 input,
@@ -40,8 +40,8 @@ select {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
-    width: 100%; /* Make sure inputs and buttons take up full width */
-    box-sizing: border-box; /* Prevent overflow */
+    width: 100%; 
+    box-sizing: border-box;
     margin-bottom: 10px;
 }
 
@@ -69,9 +69,9 @@ button:hover {
 
 #searchInput {
     flex-grow: 1;
-    min-width: 0; /* Prevent input from becoming too wide */
+    min-width: 0;
     margin-right: 10px;
-    max-width: calc(100% - 120px); /* Prevent input from overflowing the container */
+    max-width: calc(100% - 120px);
 }
 
 button {
@@ -274,7 +274,7 @@ body.dark .notification.error {
     select {
         padding: 8px;
         font-size: 14px;
-        width: 100%; /* Full width inputs on small screens */
+        width: 100%;
     }
 
     button {
@@ -305,12 +305,12 @@ body.dark .notification.error {
     }
 
     #searchInput {
-        width: 100%; /* Ensure it stays within bounds */
+        width: 100%;
         margin-bottom: 10px;
     }
 
     button {
-        width: 100%; /* Ensure button takes up full width on mobile */
+        width: 100%;
     }
 }
 
